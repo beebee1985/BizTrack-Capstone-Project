@@ -1,14 +1,17 @@
 # BizTrack — Small Business Operations & Sales Management System
 
 ## Project Overview
+
 BizTrack is a web-based business management system for small and medium-sized businesses. It centralizes daily operations such as recording sales, managing customers, tracking expenses, and generating basic reports to improve efficiency, accuracy, and visibility into business performance.
 
 ## Motivation
+
 Many small businesses still rely on notebooks or spreadsheets to track sales and expenses. This leads to errors, poor record keeping, and a lack of actionable insight. BizTrack addresses these issues by digitizing core business processes into a single, easy-to-use platform.
 
 ## Key Features
 
 **Business Owner Features:**
+
 - User registration and secure login
 - Dashboard with key metrics (sales, expenses, profit)
 - Record and manage sales transactions
@@ -19,6 +22,7 @@ Many small businesses still rely on notebooks or spreadsheets to track sales and
 - Generate basic business reports
 
 **Admin / System Features:**
+
 - Role-based access (business owner, admin)
 - CRUD operations for products, customers, sales, and expenses
 - Data validation and error handling
@@ -26,12 +30,14 @@ Many small businesses still rely on notebooks or spreadsheets to track sales and
 - Responsive web interface
 
 **Technical Features:**
+
 - Backend API built using PHP
 - MySQL database for persistent data storage
 - Frontend developed using React (RESTful communication with backend)
 - Version control with Git & GitHub
 
 ## Technology Stack
+
 - Backend: PHP
 - Database: MySQL
 - Frontend: React
@@ -40,33 +46,29 @@ Many small businesses still rely on notebooks or spreadsheets to track sales and
 - Development tools: VS Code, Postman
 
 ## Architecture (high-level)
+
 - Client (React) communicates with Backend (PHP) via RESTful API
 - Backend performs business logic and persists data to MySQL
 - Authentication and authorization handled by the backend with role checks
 
-## Getting Started (developer)
+## Getting Started
 
-Prerequisites:
-- PHP (7.4+ recommended)
-- MySQL / MariaDB
-- Node.js & npm (for frontend)
-- Git
+See [SETUP.md](SETUP.md) for detailed installation and configuration instructions.
 
-Basic setup steps:
+### Quick Start
 
-1. Clone the repository:
+**Backend:**
 
 ```bash
-git clone <repo-url>
-cd BizTrack-Capstone-Project
+cd backend
+composer install
+cp .env.example .env
+# Edit .env with your database credentials
+mysql -u root -p < database/schema.sql
+php -S localhost:8000
 ```
 
-2. Backend
-- Configure PHP environment and web server (Apache, Nginx, or PHP built-in server)
-- Create a MySQL database and update backend configuration (e.g., `.env` or config file) with DB credentials
-- Run any provided SQL schema or migrations to create tables
-
-3. Frontend
+**Frontend:**
 
 ```bash
 cd frontend
@@ -74,26 +76,127 @@ npm install
 npm start
 ```
 
-4. Open the frontend in the browser (usually at `http://localhost:3000`) and point API requests to the running backend server.
+Visit `http://localhost:3000` and login with:
 
-Notes:
-- This README provides a minimal setup guide. Add concrete scripts, example `.env` files, and database schema files to the repo for a smoother developer experience.
+- Email: admin@biztrack.com
+- Password: admin123
 
-## API (example)
-- The backend will expose RESTful endpoints for `products`, `customers`, `sales`, and `expenses` with standard CRUD operations. Endpoints will be secured and require authentication.
+**Important:** Change the default admin password after first login!
+
+## Project Structure
+
+```
+BizTrack-Capstone-Project/
+├── backend/
+│   ├── api/              # RESTful API endpoints
+│   ├── config/           # Database and CORS configuration
+│   ├── database/         # SQL schema
+│   ├── models/           # Data models (User, Product, Customer, Sale, Expense)
+│   ├── utils/            # Auth, Response, Validator utilities
+│   ├── .env.example      # Environment configuration template
+│   ├── .htaccess         # Apache configuration
+│   ├── composer.json     # PHP dependencies
+│   └── index.php         # Main router
+├── frontend/
+│   ├── public/           # Static files
+│   ├── src/
+│   │   ├── components/   # React components (Layout, PrivateRoute)
+│   │   ├── pages/        # Page components (Dashboard, Products, etc.)
+│   │   ├── services/     # API service layer
+│   │   ├── App.js        # Main app with routing
+│   │   ├── index.js      # Entry point
+│   │   └── index.css     # Global styles
+│   └── package.json      # NPM dependencies
+├── README.md
+└── SETUP.md              # Detailed setup instructions
+```
+
+## API Endpoints
+
+All endpoints except `/api/auth/login` and `/api/auth/register` require JWT authentication.
+
+**Authentication:**
+
+- POST `/api/auth/login` - User login
+- POST `/api/auth/register` - User registration
+- GET `/api/auth/me` - Get current user
+
+**Products:**
+
+- GET/POST `/api/products` - List/Create products
+- GET/PUT/DELETE `/api/products/{id}` - Get/Update/Delete product
+
+**Customers:**
+
+- GET/POST `/api/customers` - List/Create customers
+- GET/PUT/DELETE `/api/customers/{id}` - Get/Update/Delete customer
+
+**Sales:**
+
+- GET/POST `/api/sales` - List/Create sales
+- GET/PUT/DELETE `/api/sales/{id}` - Get/Update/Delete sale
+
+**Expenses:**
+
+- GET/POST `/api/expenses` - List/Create expenses
+- GET/PUT/DELETE `/api/expenses/{id}` - Get/Update/Delete expense
+
+**Dashboard:**
+
+- GET `/api/dashboard` - Get business statistics and analytics
 
 ## Contributing
+
 - Fork the repository and open a pull request with clear description of changes.
 - Add tests and documentation for new features where appropriate.
 
-## Roadmap / Next Steps
-- Implement authentication and role-based access control
-- Build the backend CRUD endpoints and database schema
-- Develop the React frontend and dashboard views
-- Add export/printable reports and more advanced analytics
+## Features Implemented
+
+✅ **Authentication System**
+
+- JWT-based authentication with secure token storage
+- User registration and login
+- Password hashing with bcrypt
+- Protected routes and API endpoints
+
+✅ **Backend API**
+
+- Complete RESTful API with CRUD operations
+- Input validation and error handling
+- CORS support for frontend integration
+- Database models for all entities
+
+✅ **Frontend Application**
+
+- React-based single-page application
+- Dashboard with sales analytics and charts
+- Product management with inventory tracking
+- Customer relationship management
+- Sales transaction recording with line items
+- Expense tracking by category
+- Responsive design with intuitive UI
+
+✅ **Database**
+
+- Normalized schema with proper relationships
+- Foreign key constraints
+- Indexes for performance
+- Default admin account
+
+## Future Enhancements
+
+- Advanced reporting and export features (PDF, Excel)
+- Multi-user role-based access control
+- Inventory low-stock alerts
+- Invoice generation and printing
+- Email notifications
+- Multi-currency support
+- Mobile app version
 
 ## Contact
+
 For questions or collaboration, open an issue or contact the project owner via the repository on GitHub.
 
 ---
+
 _Capstone Project Proposal: BizTrack — Small Business Operations & Sales Management System_
