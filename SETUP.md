@@ -71,7 +71,7 @@ The API will be available at `http://localhost:8000`
 ### Default Admin Account
 
 - **Email:** admin@biztrack.com
-- **Password:** admin123
+- **Password:** password
 
 **Important:** Change this password immediately after first login!
 

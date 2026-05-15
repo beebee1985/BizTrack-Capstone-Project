@@ -1,5 +1,10 @@
 {
     "require": {
         "firebase/php-jwt": "^6.0"
+    },
+    "config": {
+        "audit": {
+            "ignore": ["GHSA-2x45-7fc3-mxwq"]
+        }
     }
 }

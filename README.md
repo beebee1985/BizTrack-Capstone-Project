@@ -79,7 +79,7 @@ npm start
 Visit `http://localhost:3000` and login with:
 
 - Email: admin@biztrack.com
-- Password: admin123
+- Password: password
 
 **Important:** Change the default admin password after first login!
 

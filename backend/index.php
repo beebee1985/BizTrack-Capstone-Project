@@ -20,11 +20,8 @@ if (file_exists(__DIR__ . '/.env')) {
 }
 
 // Simple router
-$request_uri = $_SERVER['REQUEST_URI'];
-$script_name = dirname($_SERVER['SCRIPT_NAME']);
-$path = str_replace($script_name, '', $request_uri);
-$path = trim($path, '/');
-$path = strtok($path, '?');
+$request_uri = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
+$path = trim($request_uri, '/');
 
 // Route to API endpoints
 $routes = [
