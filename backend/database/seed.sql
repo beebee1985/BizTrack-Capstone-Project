@@ -13,16 +13,16 @@ INSERT INTO products (user_id, name, description, category, price, cost, stock_q
 (1, 'Whiteboard', '4x3 ft magnetic whiteboard', 'Office Supplies', 119.99, 55.00, 10, 'OFC-001', 'active'),
 (1, 'Printer Paper', 'A4 printer paper 500 sheets', 'Office Supplies', 12.99, 5.00, 100, 'OFC-002', 'active');
 
--- Customers
+-- Customers (Canadian names, emails, and locations)
 INSERT INTO customers (user_id, name, email, phone, address, city, state, zip_code, notes) VALUES
-(1, 'Alice Mwangi', 'alice@techcorp.co.ke', '+254712345678', '14 Westlands Ave', 'Nairobi', 'Nairobi', '00100', 'Regular corporate client'),
-(1, 'Brian Otieno', 'brian.otieno@gmail.com', '+254723456789', '7 Kibera Drive', 'Nairobi', 'Nairobi', '00200', 'Prefers card payments'),
-(1, 'Carol Njeri', 'carolnjeri@outlook.com', '+254734567890', '22 Ngong Road', 'Nairobi', 'Nairobi', '00300', ''),
-(1, 'David Kamau', 'dkamau@business.co.ke', '+254745678901', '5 Industrial Area', 'Nairobi', 'Nairobi', '00400', 'Bulk buyer'),
-(1, 'Esther Wanjiku', 'esther.w@gmail.com', '+254756789012', '33 Karen Road', 'Nairobi', 'Nairobi', '00502', ''),
-(1, 'Felix Odhiambo', 'felix@startupke.com', '+254767890123', '10 Kilimani Plaza', 'Nairobi', 'Nairobi', '00101', 'Startup owner'),
-(1, 'Grace Akinyi', 'grace.akinyi@corp.co.ke', '+254778901234', '88 Mombasa Road', 'Nairobi', 'Nairobi', '00600', 'Prefers online payment'),
-(1, 'Hassan Omar', 'hassan.omar@gmail.com', '+254789012345', '3 Parklands Ave', 'Nairobi', 'Nairobi', '00800', '');
+(1, 'Sarah Thompson', 'sarah.thompson@gmail.com', '+1-416-555-0182', '245 Bay Street', 'Toronto', 'Ontario', 'M5J 2T3', 'Regular corporate client'),
+(1, 'Michael Chen', 'mchen@techworks.ca', '+1-604-555-0247', '1055 West Georgia St', 'Vancouver', 'British Columbia', 'V6E 3P3', 'Prefers card payments'),
+(1, 'Emma Tremblay', 'emma.tremblay@outlook.com', '+1-514-555-0318', '1000 Rue de la Gauchetiere', 'Montreal', 'Quebec', 'H3B 4W5', ''),
+(1, 'James MacDonald', 'j.macdonald@northernbiz.ca', '+1-403-555-0463', '888 3rd Street SW', 'Calgary', 'Alberta', 'T2P 5C5', 'Bulk buyer'),
+(1, 'Olivia Patel', 'olivia.patel@gmail.com', '+1-613-555-0574', '150 Slater Street', 'Ottawa', 'Ontario', 'K1P 5H3', ''),
+(1, 'Liam Bourgeois', 'liam.bourgeois@startupca.com', '+1-780-555-0629', '10060 Jasper Ave', 'Edmonton', 'Alberta', 'T5J 3R8', 'Startup owner'),
+(1, 'Sophia Kowalski', 'sophia.k@corp.ca', '+1-204-555-0735', '360 Main Street', 'Winnipeg', 'Manitoba', 'R3C 3Z3', 'Prefers online payment'),
+(1, 'Noah Williams', 'noah.williams@gmail.com', '+1-902-555-0891', '1701 Hollis Street', 'Halifax', 'Nova Scotia', 'B3J 3M8', '');
 
 -- Sales (April & May 2026)
 INSERT INTO sales (user_id, customer_id, sale_date, total_amount, discount, tax, payment_method, status, notes) VALUES
