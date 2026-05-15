@@ -1,5 +1,5 @@
 import React from "react";
-import { NavLink, useNavigate } from "react-router-dom";
+import { NavLink, Outlet, useNavigate } from "react-router-dom";
 import { authService } from "../services";
 
 function Layout({ children }) {
@@ -50,7 +50,7 @@ function Layout({ children }) {
           </ul>
         </nav>
       </aside>
-      <main className="main-content">{children}</main>
+      <main className="main-content"><Outlet /></main>
     </div>
   );
 }
