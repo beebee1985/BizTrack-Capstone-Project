@@ -8,6 +8,12 @@ BizTrack is a web-based business management system for small and medium-sized bu
 
 Many small businesses still rely on notebooks or spreadsheets to track sales and expenses. This leads to errors, poor record keeping, and a lack of actionable insight. BizTrack addresses these issues by digitizing core business processes into a single, easy-to-use platform.
 
+## Screenshots
+<img width="1919" height="917" alt="image" src="https://github.com/user-attachments/assets/5215924d-5b94-40c0-9249-1b2e643c0fa7" />
+<img width="1919" height="944" alt="image" src="https://github.com/user-attachments/assets/d6dc82dd-4a0d-420d-86e5-8576113c5d90" />
+<img width="1919" height="931" alt="image" src="https://github.com/user-attachments/assets/afe634be-abab-48b6-a07b-590ffac1497a" />
+<img width="1919" height="931" alt="image" src="https://github.com/user-attachments/assets/10ea1424-e701-4b47-911c-8308050868ff" />
+
 ## Key Features
 
 **Business Owner Features:**
