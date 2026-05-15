@@ -13,6 +13,8 @@ Many small businesses still rely on notebooks or spreadsheets to track sales and
 <img width="1919" height="944" alt="image" src="https://github.com/user-attachments/assets/d6dc82dd-4a0d-420d-86e5-8576113c5d90" />
 <img width="1919" height="931" alt="image" src="https://github.com/user-attachments/assets/afe634be-abab-48b6-a07b-590ffac1497a" />
 <img width="1919" height="931" alt="image" src="https://github.com/user-attachments/assets/10ea1424-e701-4b47-911c-8308050868ff" />
+<img width="1919" height="950" alt="image" src="https://github.com/user-attachments/assets/b86a7468-2b75-400c-b05a-d3497eff6f8d" />
+<img width="1914" height="931" alt="image" src="https://github.com/user-attachments/assets/7c1f3e01-8370-4824-95e0-60a53fb342e7" />
 
 ## Key Features
 
